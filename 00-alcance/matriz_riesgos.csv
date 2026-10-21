@@ -1,0 +1,13 @@
+id,riesgo,activo,p,i,nivel,clasificacion,control_soc,responsable,fase
+R-01,Ransomware cifra el NAS de proyectos,NAS-C04-01,4,5,20,Crítico,Reglas FIM/Samba + active response + anti-cifrado Kaspersky + respaldo inmutable + PB-02,SOC N1 / Admin TI,2-3
+R-02,Phishing roba credenciales de Workspace y da acceso a cuentas de clientes,S-01 S-03,4,5,20,Crítico,Buzón GLPI + control web + bloqueo NGFW + MFA + PB-06,SOC N1,3-4-6
+R-03,Cuenta de cliente en Meta/Google Ads secuestrada,S-03,3,5,15,Alto,PB-04 PB-06 + MFA + inventario de accesos,Community manager,4-6
+R-04,Fuga de material de campaña por USB,Estaciones,3,4,12,Alto,Control de dispositivos + regla USB + PB-05,SOC N1,2-3
+R-05,Malware desde software pirata o plugins,Estaciones diseño,3,4,12,Alto,EDR + control web + PB-02,SOC N1,3
+R-06,Vulnerabilidades sin parchear (Adobe navegadores macOS),Estaciones,4,3,12,Alto,Detección de vulnerabilidades + PB-09,Admin TI,2
+R-07,Portátil remoto sin monitoreo o perdido,LT-C04-01..04,3,4,12,Alto,Agentes por VPN + cifrado + KPI cobertura,Admin TI,2-3
+R-08,Alertas sin atender por falta de proceso,SOC,3,4,12,Alto,Playbooks + SLA GLPI + guardia rotativa,Responsable SOC,6
+R-09,Acceso administrativo no autorizado a FS01 o NAS,SRV NAS,3,4,12,Alto,Regla horario + fuerza bruta + AR + PB-01/04/08,SOC N1,2
+R-10,Cambios no autorizados en archivos o configuración críticos,SRV NAS,2,4,8,Medio,FIM + SCA + PB-03,SOC N1,2
+R-11,Red plana permite a invitados llegar al NAS,Red,3,3,9,Medio,VLAN + reglas NGFW + PB-07,Admin TI,1-5
+R-12,Incumplimiento Ley 1581 sobre bases de contactos,Bases marketing,2,4,8,Medio,Clasificación + acceso + informe con notificación,Gerencia,0-6

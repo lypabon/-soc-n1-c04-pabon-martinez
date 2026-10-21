@@ -1,0 +1,55 @@
+<!--
+  Fragmentos para /var/ossec/etc/ossec.conf del MANAGER (wazuh-c04-lp).
+  Pegar dentro de <ossec_config> en la sección correspondiente; no duplicar bloques existentes.
+  Verificar la sintaxis contra la versión instalada (4.14.x).
+-->
+
+<!-- 1. Lista blanca para active response y alertas por correo -->
+<global>
+  <white_list>127.0.0.1</white_list>
+  <white_list>192.168.56.1</white_list>     <!-- anfitrión = consola del analista -->
+  <white_list>192.168.56.10</white_list>    <!-- el propio manager -->
+  <email_notification>yes</email_notification>
+  <smtp_server>localhost</smtp_server>      <!-- relé Postfix local que autentica contra el proveedor -->
+  <email_from>wazuh@lumbredigital.example</email_from>
+  <email_to>soc-n1@lumbredigital.example</email_to>
+  <email_maxperhour>12</email_maxperhour>
+  <!-- <logall>yes</logall>  SOLO temporal para capturar la línea CEF de Kaspersky; apagar después -->
+</global>
+
+<alerts>
+  <log_alert_level>3</log_alert_level>
+  <email_alert_level>10</email_alert_level>
+</alerts>
+
+<!-- 2. Receptor syslog solo para la consola de Kaspersky (y el NGFW en producción) -->
+<remote>
+  <connection>syslog</connection>
+  <port>514</port>
+  <protocol>udp</protocol>
+  <allowed-ips>192.168.56.20</allowed-ips>
+</remote>
+
+<!-- 3. Detección de vulnerabilidades -->
+<vulnerability-detection>
+  <enabled>yes</enabled>
+  <index-status>yes</index-status>
+  <feed-update-interval>60m</feed-update-interval>
+</vulnerability-detection>
+
+<!-- 4. Respuesta activa -->
+<!-- 4a. Fuerza bruta SSH contra el NAS: bloquear 10 min (verificar ID 5763 en el ruleset) -->
+<active-response>
+  <command>firewall-drop</command>
+  <location>local</location>
+  <rules_id>5763</rules_id>
+  <timeout>600</timeout>
+</active-response>
+
+<!-- 4b. Ransomware: el NAS bloquea la IP del equipo que renombra/cifra (srcip viene del decoder samba-audit) -->
+<active-response>
+  <command>firewall-drop</command>
+  <location>local</location>
+  <rules_id>100322,100323</rules_id>
+  <timeout>1800</timeout>
+</active-response>

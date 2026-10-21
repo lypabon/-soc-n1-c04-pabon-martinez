@@ -1,0 +1,144 @@
+<!--
+  local_rules.xml — Caso C04 Lumbre Digital S.A.S.
+  IDs 100000+. Orden importante: dentro de un mismo padre, las reglas más específicas van primero.
+  Verificar los IDs base (60001, 60106, 550/553/554, 5763) en el ruleset instalado (wazuh-logtest).
+-->
+
+<!-- ===================== A. Ransomware en el NAS (FIM) ===================== -->
+<group name="local,syscheck,ransomware,c04,">
+
+  <!-- Archivo nuevo con extensión típica de cifrado -->
+  <rule id="100300" level="10">
+    <if_sid>554</if_sid>
+    <field name="file" type="pcre2">(?i)\.(locked|lock|encrypted|enc|crypt|crypted|lckd|ransom)$</field>
+    <description>FIM: archivo con extensión de cifrado creado: $(file)</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+
+  <!-- Nota de rescate -->
+  <rule id="100301" level="12">
+    <if_sid>554</if_sid>
+    <field name="file" type="pcre2">(?i)(readme|how_to|decrypt|restore|recover)[^/\\]*\.(txt|html|hta)$</field>
+    <description>FIM: posible nota de rescate creada: $(file)</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+
+  <!-- Borrado masivo en carpeta vigilada -->
+  <rule id="100302" level="12" frequency="30" timeframe="60">
+    <if_matched_sid>553</if_matched_sid>
+    <description>FIM: borrado masivo de archivos (30 en 60 s) - posible ransomware o borrado malicioso</description>
+    <mitre><id>T1485</id></mitre>
+  </rule>
+
+  <!-- Varios archivos cifrados en poco tiempo -->
+  <rule id="100303" level="14" frequency="5" timeframe="120">
+    <if_matched_sid>100300</if_matched_sid>
+    <description>FIM: 5 o más archivos con extensión de cifrado en 2 minutos - posible ransomware activo</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+</group>
+
+<!-- ============ B. Ransomware en el NAS (auditoría Samba, con usuario e IP) ============ -->
+<group name="local,samba,ransomware,c04,">
+
+  <!-- Base: todo evento de auditoría Samba (nivel 0 = no genera alerta).
+       13100 es la regla de agrupación de smbd del ruleset oficial. -->
+  <rule id="100320" level="0">
+    <if_sid>13100</if_sid>
+    <program_name>^smbd_audit$</program_name>
+    <field name="operation">\w</field>
+    <description>Samba: $(operation) $(result) por $(dstuser) desde $(srcip)</description>
+  </rule>
+
+  <!-- Renombrado a extensión de cifrado (va ANTES de 100321) -->
+  <rule id="100323" level="13">
+    <if_sid>100320</if_sid>
+    <field name="operation" type="pcre2">^renameat$|^rename$</field>
+    <field name="file" type="pcre2">(?i)\.(locked|lock|encrypted|enc|crypt|crypted|lckd|ransom)$</field>
+    <description>NAS: $(dstuser) desde $(srcip) renombró un archivo a extensión de cifrado</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+
+  <!-- Renombrado normal (nivel 2: no alerta, solo sirve para correlacionar) -->
+  <rule id="100321" level="2">
+    <if_sid>100320</if_sid>
+    <field name="operation" type="pcre2">^renameat$|^rename$</field>
+    <description>NAS: archivo renombrado por $(dstuser) desde $(srcip)</description>
+  </rule>
+
+  <!-- 20 renombrados del mismo usuario en 60 s -->
+  <rule id="100322" level="12" frequency="20" timeframe="60">
+    <if_matched_sid>100321</if_matched_sid>
+    <same_user />
+    <description>NAS: renombrado masivo por $(dstuser) desde $(srcip) - posible ransomware</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+</group>
+
+<!-- ===================== C. Kaspersky (CEF vía syslog) ===================== -->
+<group name="local,kaspersky,c04,">
+
+  <rule id="100200" level="3">
+    <decoded_as>kaspersky-cef</decoded_as>
+    <description>Kaspersky: $(ks_name)</description>
+  </rule>
+
+  <!-- Específicas primero -->
+  <rule id="100204" level="14">
+    <if_sid>100200</if_sid>
+    <field name="ks_name" type="pcre2">(?i)(cifrad|encrypt|ransom|crypt)</field>
+    <description>Kaspersky: actividad de cifrado/ransomware en $(ks_host) - $(ks_name)</description>
+    <mitre><id>T1486</id></mitre>
+  </rule>
+
+  <rule id="100203" level="8">
+    <if_sid>100200</if_sid>
+    <field name="ks_name" type="pcre2">(?i)(dispositivo|device).*(bloque|block|prohib|denied)</field>
+    <description>Kaspersky: dispositivo extraíble bloqueado en $(ks_host)</description>
+    <group>usb,</group>
+  </rule>
+
+  <rule id="100201" level="10">
+    <if_sid>100200</if_sid>
+    <field name="ks_event_id" type="pcre2">(?i)(VIRUS_FOUND|OBJECT_|DETECT|MALWARE)</field>
+    <description>Kaspersky: objeto malicioso detectado en $(ks_host) - $(ks_name)</description>
+  </rule>
+
+  <rule id="100202" level="10">
+    <if_sid>100200</if_sid>
+    <field name="ks_severity" type="pcre2">^([7-9]|10)$</field>
+    <description>Kaspersky: evento de severidad alta - $(ks_name)</description>
+  </rule>
+</group>
+
+<!-- ===================== D. USB en Windows (evento 6416) ===================== -->
+<!-- Requiere auditoría "Plug and Play Events" (despliegue/auditpol_usb.ps1).
+     En el ruleset 4.14 la regla 60227 ya reconoce el 6416 ("A new external device was recognized");
+     esta regla la especializa a almacenamiento y la vuelve buscable para el escenario 3 del caso. -->
+<group name="local,windows,usb,c04,">
+  <rule id="100400" level="8">
+    <if_sid>60227</if_sid>
+    <field name="win.eventdata.className" type="pcre2">(?i)(DiskDrive|USB|WPD|Volume)</field>
+    <description>USB: dispositivo de almacenamiento conectado en $(win.system.computer): $(win.eventdata.deviceDescription)</description>
+    <mitre><id>T1052.001</id></mitre>
+  </rule>
+</group>
+
+<!-- ===================== E. Inicio de sesión fuera de horario ===================== -->
+<group name="local,fuera_horario,c04,">
+  <rule id="100100" level="10">
+    <if_sid>60106</if_sid>
+    <time>7 pm - 6 am</time>
+    <field name="win.eventdata.targetUserName" type="pcre2" negate="yes">\$$</field>
+    <description>Inicio de sesión exitoso fuera del horario laboral: $(win.eventdata.targetUserName) en $(win.system.computer)</description>
+    <group>authentication_success,policy_violation,</group>
+  </rule>
+
+  <rule id="100101" level="10">
+    <if_sid>60106</if_sid>
+    <weekday>weekends</weekday>
+    <field name="win.eventdata.targetUserName" type="pcre2" negate="yes">\$$</field>
+    <description>Inicio de sesión exitoso en fin de semana: $(win.eventdata.targetUserName) en $(win.system.computer)</description>
+    <group>authentication_success,policy_violation,</group>
+  </rule>
+</group>

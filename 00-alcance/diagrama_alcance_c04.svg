@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="980" viewBox="0 0 1700 980" font-family="DejaVu Sans">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<rect width="1700" height="980" fill="#ffffff"/>
+<text x="24" y="38" font-size="22" font-weight="bold" fill="#1F1F2E">Diagrama de alcance — SOC N1 Lumbre Digital (Fase 0)</text>
+<text x="24" y="60" font-size="12" fill="#555">Caso C04 · Lumbre Digital S.A.S. (ficticia) · L. Pabón · direccionamiento de ejemplo · 19/10/2026</text>
+<rect x="30" y="90" width="1100" height="640" rx="10" fill="#EAF6EC" fill-opacity="0.55" stroke="#2F7D3A" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="40" y="110" font-size="13" font-weight="bold" fill="#2F7D3A">DENTRO DEL ALCANCE (autorizado en la carta, Anexo H)</text>
+<rect x="50" y="130" width="520" height="330" rx="10" fill="#E7F0FB" fill-opacity="0.55" stroke="#1F5FAD" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="60" y="150" font-size="13" font-weight="bold" fill="#1F5FAD">Laboratorio aislado · host-only 192.168.56.0/24</text>
+<rect x="590" y="130" width="520" height="150" rx="10" fill="#FFF8DB" fill-opacity="0.55" stroke="#B8860B" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="600" y="150" font-size="13" font-weight="bold" fill="#B8860B">Nube contratada por la consultora</text>
+<rect x="590" y="300" width="520" height="160" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="600" y="320" font-size="13" font-weight="bold" fill="#9AA0A6">Diseño documentado (no se instala)</text>
+<rect x="50" y="480" width="1060" height="230" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="60" y="500" font-size="13" font-weight="bold" fill="#9AA0A6">Operación del SOC</text>
+<rect x="1150" y="90" width="520" height="640" rx="10" fill="#FCE8EC" fill-opacity="0.55" stroke="#A61E4D" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1160" y="110" font-size="13" font-weight="bold" fill="#A61E4D">FUERA DEL ALCANCE (prohibido)</text>
+<rect x="30" y="750" width="1640" height="200" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="40" y="770" font-size="13" font-weight="bold" fill="#9AA0A6">Marco legal y normativo</text>
+<rect x="70" y="180" width="230" height="55" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="185.0" y="204.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">wazuh-c04-lp (.10)</text>
+<text x="185.0" y="219.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">SIEM Wazuh 4.14</text>
+<rect x="320" y="180" width="230" height="55" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="435.0" y="204.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">ksc-c04-lp (.20)</text>
+<text x="435.0" y="219.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Kaspersky Security Center</text>
+<rect x="70" y="260" width="230" height="55" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="185.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">win11-c04-lp (.30)</text>
+<text x="185.0" y="299.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">representa WS-C04-01</text>
+<rect x="320" y="260" width="230" height="55" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="435.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">nas-c04-lp (.40)</text>
+<text x="435.0" y="299.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">representa NAS-C04-01</text>
+<rect x="70" y="345" width="480" height="95" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="310.0" y="381.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Pruebas permitidas: EICAR · cambios en archivos vigilados ·</text>
+<text x="310.0" y="396.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">renombrado de archivos falsos en el NAS · SSH fallido entre VM propias ·</text>
+<text x="310.0" y="411.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">USB virtual · phishing simulado a buzón del ejercicio</text>
+<rect x="610" y="175" width="480" height="75" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="850.0" y="201.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">glpi-c04-lp · GLPI por HTTPS</text>
+<text x="850.0" y="216.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">(SSH solo desde la IP de la consultora;</text>
+<text x="850.0" y="231.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">no se escanea ni se prueba)</text>
+<rect x="610" y="340" width="480" height="45" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="850.0" y="366.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Los 20 equipos reales: 8 Mac · 10 Win11 · WinSrv 2019 · NAS</text>
+<rect x="610" y="395" width="480" height="45" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="850.0" y="421.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NGFW FortiGate 40F (solo cotización) · switch · 2 AP</text>
+<rect x="70" y="520" width="330" height="80" rx="7" fill="#1F1F2E" stroke="#1F1F2E" stroke-width="2"/>
+<text x="235.0" y="549.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Horario</text>
+<text x="235.0" y="564.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">L–V 7:00–19:00 activo</text>
+<text x="235.0" y="579.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">guardia Alta/Crítica 24×7</text>
+<rect x="420" y="520" width="330" height="80" rx="7" fill="#1F1F2E" stroke="#1F1F2E" stroke-width="2"/>
+<text x="585.0" y="549.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Datos</text>
+<text x="585.0" y="564.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">100 % ficticios · dominios .example</text>
+<text x="585.0" y="579.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">logs = Confidencial (Ley 1581)</text>
+<rect x="770" y="520" width="320" height="80" rx="7" fill="#1F1F2E" stroke="#1F1F2E" stroke-width="2"/>
+<text x="930.0" y="549.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Metas</text>
+<text x="930.0" y="564.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">100 % agentes · 90 % SLA</text>
+<text x="930.0" y="579.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">MFA en todas las cuentas</text>
+<rect x="70" y="620" width="1020" height="70" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="580.0" y="659.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Ventana: desde el inicio del parcial hasta la sustentación · Detención: ante hallazgo real o duda, parar y avisar al docente</text>
+<rect x="1170" y="135" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="172.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Sistemas de la UTS y de compañeros</text>
+<rect x="1170" y="217" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="254.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Internet y sistemas de terceros</text>
+<rect x="1170" y="299" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="328.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Cuentas reales de clientes</text>
+<text x="1410.0" y="343.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">(Meta, Google Ads, TikTok)</text>
+<rect x="1170" y="381" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="418.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Redes domésticas de empleados</text>
+<rect x="1170" y="463" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="500.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Datos personales reales</text>
+<rect x="1170" y="545" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="582.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Malware real · ataques ofensivos</text>
+<rect x="1170" y="627" width="480" height="66" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1410.0" y="656.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Escanear la propia instancia en la nube</text>
+<text x="1410.0" y="671.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">si el proveedor no lo permite</text>
+<rect x="50" y="790" width="520" height="140" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="310.0" y="841.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Ley 1273 de 2009</text>
+<text x="310.0" y="856.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">acceso abusivo (269A), interceptación (269C),</text>
+<text x="310.0" y="871.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">daño informático (269D): por eso la carta</text>
+<text x="310.0" y="886.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">y el laboratorio aislado</text>
+<rect x="590" y="790" width="520" height="140" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="841.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Ley 1581 de 2012</text>
+<text x="850.0" y="856.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">los logs tienen datos personales:</text>
+<text x="850.0" y="871.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">finalidad de seguridad, acceso restringido,</text>
+<text x="850.0" y="886.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">retención 90 días + 12 meses</text>
+<rect x="1130" y="790" width="520" height="140" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="1390.0" y="841.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">ISO/IEC 27001:2022 y NIST CSF 2.0</text>
+<text x="1390.0" y="856.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">A.5.9 inventario · A.8.15–8.16 registro y</text>
+<text x="1390.0" y="871.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">monitoreo · A.5.24–5.28 incidentes ·</text>
+<text x="1390.0" y="886.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">ID.AM, DE.CM, RS.MA</text>
+</svg>

@@ -1,0 +1,14 @@
+origen,destino,puerto_protocolo,que_se_recolecta
+Agentes Wazuh (Mac Windows NAS FS01),Wazuh 10.40.90.10,1514/TCP,Eventos FIM SCA inventario
+Agentes Wazuh,Wazuh,1515/TCP,Registro de agentes
+NAS audit Samba (vía agente),Wazuh,1514/TCP,Renombrado/borrado por usuario e IP
+NGFW,Wazuh,514/UDP,Denegaciones IPS web VPN cambios
+Kaspersky Security Center,Wazuh,514/UDP CEF,Detecciones USB fallas
+Network Agent,KSC,13000/TCP 14000/TCP; 15000/UDP retorno,Gestión políticas eventos (verificar versión)
+Analista N1,Wazuh Dashboard,443/TCP,Consola SIEM
+Analista N1,Consola Kaspersky,13291/TCP o 8080/TCP,Administración (verificar versión)
+GLPI Agent,GLPI nube,443/TCP,Inventario
+Usuarios y analista,GLPI,443/TCP,Tickets KB
+GLPI,smtp.gmail.com,587/TCP STARTTLS,Notificaciones
+GLPI,Buzón reporte-phishing,993/TCP IMAPS,Tickets automáticos de phishing
+Todos,NGFW (NTP),123/UDP,Hora America/Bogota

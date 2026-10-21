@@ -1,0 +1,23 @@
+# Pegar una línea a la vez en: sudo /var/ossec/bin/wazuh-logtest
+# Resultados verificados en Wazuh 4.14.9 (sandbox) el 19/10/2026; repetir en tu laboratorio y capturar.
+
+# 1) Samba: renombrado a extensión de cifrado -> regla 100323 (nivel 13)
+Oct 19 10:15:01 nas-c04-lp smbd_audit: sprada|192.168.56.30|win11-c04-lp|proyectos|renameat|ok|cliente_x/banner.psd|cliente_x/banner.psd.locked
+
+# 2) Samba: renombrado normal -> 100321 (nivel 2, sin alerta). Pegando 20+ en la misma sesión en menos de 60 s -> 100322 (nivel 12)
+Oct 19 10:16:01 nas-c04-lp smbd_audit: sprada|192.168.56.30|win11-c04-lp|proyectos|renameat|ok|prueba_ransom/doc_1.txt|prueba_ransom/doc_1.txt.c04x
+
+# 3) Kaspersky CEF: detección (EICAR) -> 100201
+Oct 19 11:02:10 ksc-c04-lp CEF:0|KasperskyLab|SecurityCenter|15.0|GNRL_EV_VIRUS_FOUND|Objeto malicioso detectado|4|msg=EICAR-Test-File dhost=win11-c04-lp dst=192.168.56.30
+
+# 4) Kaspersky CEF: USB bloqueado -> 100203
+Oct 19 11:05:44 ksc-c04-lp CEF:0|KasperskyLab|SecurityCenter|15.0|GNRL_EV_DEVICE_BLOCKED|Dispositivo bloqueado por el Control de dispositivos|3|dhost=win11-c04-lp dst=192.168.56.30
+
+# 5) Kaspersky CEF: cifrado -> 100204
+Oct 19 11:09:01 ksc-c04-lp KasperskySC: CEF:0|Kaspersky|SecurityCenter|15.0|GNRL_EV_SUSPICIOUS_OBJECT_FOUND|Actividad de cifrado detectada por Detección de comportamiento|8|dhost=win11-c04-lp
+
+# IMPORTANTE: las líneas 3-5 son PLANTILLAS. Reemplazar por líneas reales de archives.log
+# (logall temporal) y ajustar el decoder si el formato real difiere.
+
+# 6) SSH fallido (para contexto de PB-01); 8 seguidas en 120 s del mismo origen -> 5763 en eventos reales
+Oct 19 10:20:01 nas-c04-lp sshd[1231]: Failed password for prueba from 192.168.56.1 port 44551 ssh2

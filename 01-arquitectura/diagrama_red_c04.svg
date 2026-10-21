@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="1060" viewBox="0 0 1700 1060" font-family="DejaVu Sans">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<rect width="1700" height="1060" fill="#ffffff"/>
+<text x="24" y="38" font-size="22" font-weight="bold" fill="#1F1F2E">Diagrama de red y segmentación — SOC N1 Lumbre Digital</text>
+<text x="24" y="60" font-size="12" fill="#555">Caso C04 · Lumbre Digital S.A.S. (ficticia) · L. Pabón · direccionamiento de ejemplo · 19/10/2026</text>
+<rect x="40" y="80" width="460" height="170" rx="10" fill="#FFF8DB" fill-opacity="0.55" stroke="#B8860B" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="50" y="100" font-size="13" font-weight="bold" fill="#B8860B">Servicios en la nube (SaaS)</text>
+<rect x="30" y="500" width="500" height="250" rx="10" fill="#F3EEFA" fill-opacity="0.55" stroke="#6B46A8" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="40" y="520" font-size="13" font-weight="bold" fill="#6B46A8">VLAN 10 · Diseño y producción</text>
+<text x="40" y="535" font-size="11" font-weight="normal" fill="#6B46A8">10.40.10.0/24</text>
+<rect x="550" y="500" width="250" height="250" rx="10" fill="#F3EEFA" fill-opacity="0.55" stroke="#6B46A8" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="560" y="520" font-size="13" font-weight="bold" fill="#6B46A8">VLAN 20 · Admin. y comercial</text>
+<text x="560" y="535" font-size="11" font-weight="normal" fill="#6B46A8">10.40.20.0/24</text>
+<rect x="820" y="500" width="300" height="250" rx="10" fill="#EAF6EC" fill-opacity="0.55" stroke="#2F7D3A" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="830" y="520" font-size="13" font-weight="bold" fill="#2F7D3A">VLAN 30 · Servidores</text>
+<text x="830" y="535" font-size="11" font-weight="normal" fill="#2F7D3A">10.40.30.0/24</text>
+<rect x="1140" y="500" width="280" height="250" rx="10" fill="#E7F0FB" fill-opacity="0.55" stroke="#1F5FAD" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1150" y="520" font-size="13" font-weight="bold" fill="#1F5FAD">VLAN 90 · Seguridad</text>
+<text x="1150" y="535" font-size="11" font-weight="normal" fill="#1F5FAD">10.40.90.0/24 · solo analista</text>
+<rect x="1440" y="500" width="230" height="120" rx="10" fill="#F1F1F1" fill-opacity="0.55" stroke="#777777" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1450" y="520" font-size="13" font-weight="bold" fill="#777777">VLAN 40 · Invitados</text>
+<text x="1450" y="535" font-size="11" font-weight="normal" fill="#777777">10.40.40.0/24</text>
+<rect x="1440" y="630" width="230" height="120" rx="10" fill="#FCE8EC" fill-opacity="0.55" stroke="#A61E4D" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="1450" y="650" font-size="13" font-weight="bold" fill="#A61E4D">VLAN 99 · Gestión</text>
+<text x="1450" y="665" font-size="11" font-weight="normal" fill="#A61E4D">10.40.99.0/24</text>
+<rect x="30" y="790" width="1640" height="250" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="40" y="810" font-size="13" font-weight="bold" fill="#9AA0A6">Reglas mínimas entre VLAN (todo lo no listado se deniega y se registra en el NGFW → Wazuh)</text>
+<path d="M850,160 L850,250" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="835" y="196" width="29" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="850" y="208" font-size="11" text-anchor="middle" fill="#333">WAN</text>
+<path d="M480,136 L720,126" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="579" y="122" width="42" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="600" y="134" font-size="11" text-anchor="middle" fill="#333">HTTPS</text>
+<path d="M1210,120 L1100,120 L980,120" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<path d="M1325,240 L1325,270" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1298" y="246" width="55" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1325" y="258" font-size="11" text-anchor="middle" fill="#333">VPN TLS</text>
+<path d="M1210,292 L970,285" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M850,314 L850,370" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="807" y="333" width="87" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="850" y="345" font-size="11" text-anchor="middle" fill="#333">troncal VLAN</text>
+<path d="M730,398 L400,398 L400,560" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="538" y="389" width="55" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="565" y="401" font-size="11" text-anchor="middle" fill="#333">VLAN 10</text>
+<path d="M756,426 L675,450 L675,560" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="688" y="429" width="55" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="715" y="441" font-size="11" text-anchor="middle" fill="#333">VLAN 20</text>
+<path d="M915,426 L970,450 L970,560" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="915" y="429" width="55" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="942" y="441" font-size="11" text-anchor="middle" fill="#333">VLAN 30</text>
+<path d="M970,398 L1280,398 L1280,560" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1098" y="389" width="55" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1125" y="401" font-size="11" text-anchor="middle" fill="#333">VLAN 90</text>
+<path d="M970,398 L1555,398 L1555,555" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1219" y="389" width="87" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1262" y="401" font-size="11" text-anchor="middle" fill="#333">VLAN 40 / 99</text>
+<path d="M1555,605 L1555,685" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<ellipse cx="850.0" cy="120.0" rx="130.0" ry="40.0" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="850.0" y="116.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Internet</text>
+<text x="850.0" y="131.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">ISP fibra 300 Mbps</text>
+<rect x="60" y="115" width="200" height="50" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="160.0" y="136.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Google Workspace</text>
+<text x="160.0" y="151.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">correo · Drive · identidad (MFA)</text>
+<rect x="280" y="115" width="200" height="50" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="380.0" y="136.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Drive de entregas</text>
+<text x="380.0" y="151.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">a clientes</text>
+<rect x="60" y="180" width="420" height="50" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="270.0" y="201.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Cuentas de clientes: Meta Business · Google Ads · TikTok</text>
+<text x="270.0" y="216.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">(la agencia administra pauta y redes)</text>
+<rect x="1210" y="90" width="230" height="60" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="1325.0" y="116.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">GLPI en la nube</text>
+<text x="1325.0" y="131.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">glpi-c04-lp · HTTPS 443</text>
+<rect x="1210" y="180" width="230" height="60" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="1325.0" y="206.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Usuarios remotos (híbrido)</text>
+<text x="1325.0" y="221.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">LT-C04-01..04 vía VPN</text>
+<rect x="730" y="250" width="240" height="64" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="850.0" y="278.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NGFW FW-C04-01</text>
+<text x="850.0" y="293.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">IPS · filtro web · TLS · VPN · NTP</text>
+<rect x="730" y="370" width="240" height="56" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="850.0" y="394.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Switch SW-C04-01 (16p)</text>
+<text x="850.0" y="409.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">troncal 802.1Q · 7 VLAN</text>
+<rect x="50" y="560" width="220" height="70" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="160.0" y="584.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">8 × macOS</text>
+<text x="160.0" y="599.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">MAC-C04-01..08</text>
+<text x="160.0" y="614.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">iMac / Mac mini</text>
+<rect x="290" y="560" width="220" height="70" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="400.0" y="584.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">6 × Windows 11</text>
+<text x="400.0" y="599.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">WS-C04-01..06</text>
+<text x="400.0" y="614.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">video · 3D · render</text>
+<rect x="50" y="660" width="460" height="60" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="280.0" y="686.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Agentes Wazuh · Kaspersky · GLPI Agent</text>
+<text x="280.0" y="701.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">USB bloqueado · 3 SSD de producción aprobados</text>
+<rect x="570" y="560" width="210" height="90" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="675.0" y="586.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">4 × portátil Win11</text>
+<text x="675.0" y="601.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">LT-C04-01..04</text>
+<text x="675.0" y="616.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">gerencia · community</text>
+<text x="675.0" y="631.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">comercial · TI/N1</text>
+<rect x="840" y="560" width="260" height="60" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="970.0" y="586.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">SRV-C04-FS01 (.10)</text>
+<text x="970.0" y="601.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Windows Server 2019 · archivos</text>
+<rect x="840" y="640" width="260" height="80" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="970.0" y="669.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NAS-C04-01 (.20) · Linux Samba</text>
+<text x="970.0" y="684.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">\\proyectos (activo crítico)</text>
+<text x="970.0" y="699.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">FIM tiempo real · auditoría Samba</text>
+<rect x="1160" y="560" width="240" height="170" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="1280.0" y="611.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Host de seguridad (Proxmox)</text>
+<text x="1280.0" y="626.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E"></text>
+<text x="1280.0" y="641.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">wazuh-c04 (.10)</text>
+<text x="1280.0" y="656.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">indexer · server · dashboard</text>
+<text x="1280.0" y="671.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E"></text>
+<text x="1280.0" y="686.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Kaspersky Security Center (.20)</text>
+<rect x="1460" y="555" width="190" height="50" rx="7" fill="#F1F1F1" stroke="#777777" stroke-width="2"/>
+<text x="1555.0" y="576.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Wi-Fi invitados</text>
+<text x="1555.0" y="591.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">solo Internet</text>
+<rect x="1460" y="685" width="190" height="50" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1555.0" y="706.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">AP-C04-01/02 (.3 .4)</text>
+<text x="1555.0" y="721.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">switch .2 · NGFW .1</text>
+<rect x="1210" y="270" width="230" height="50" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="1325.0" y="291.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">VLAN 50 · Pool VPN</text>
+<text x="1325.0" y="306.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">10.40.50.0/24</text>
+<rect x="50" y="825" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="843.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">VLAN 10, 20, 50 → VLAN 30: solo SMB 445/TCP al NAS y al FS01 · RDP al servidor solo desde LT-C04-04 (analista)</text>
+<rect x="50" y="859" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="877.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">VLAN 10, 20, 30, 50 → VLAN 90: 1514–1515/TCP (Wazuh) · 13000/TCP y 15000/UDP (Kaspersky)</text>
+<rect x="50" y="893" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="911.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">LT-C04-04 → VLAN 90: 443/TCP (Dashboard), consola Kaspersky, 22/TCP · LT-C04-04 → VLAN 99: administración de red</text>
+<rect x="50" y="927" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="945.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">VLAN 40 Invitados → solo Internet (HTTP/HTTPS/DNS filtrado), sin acceso a ninguna VLAN interna · aislamiento de clientes Wi-Fi</text>
+<rect x="50" y="961" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="979.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">VLAN 10, 20 → Internet: IPS + filtro web + inspección TLS (excepto banca/salud) · NGFW y KSC → Wazuh: 514/UDP syslog/CEF</text>
+<rect x="50" y="995" width="1600" height="28" rx="7" fill="#FFFFFF" stroke="#9AA0A6" stroke-width="2"/>
+<text x="850.0" y="1013.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NTP interno en el NGFW (123/UDP) · zona horaria America/Bogota · nomenclatura &lt;TIPO&gt;-C04-&lt;NN&gt;</text>
+</svg>

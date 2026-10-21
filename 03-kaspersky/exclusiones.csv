@@ -1,0 +1,4 @@
+exclusion,alcance,tipo,motivo,aprobo,fecha_revision,ticket_cambio_glpi
+"Caché de medios de la aplicación de edición de video (carpeta Media Cache)","Solo WS-C04-01..06","Análisis en acceso","Archivos temporales de varios GB que frenan la reproducción; no ejecutables","Responsable SOC","+3 meses","#[N]"
+"Directorio de datos del agente Wazuh (C:\Program Files (x86)\ossec-agent\queue)","Solo SRV-C04-FS01","Análisis en acceso","Bloqueos de lectura durante el análisis","Responsable SOC","+3 meses","#[N]"
+# NO se excluyen: carpetas de proyectos, Descargas, perfiles de usuario completos ni unidades enteras.

@@ -1,0 +1,8 @@
+vlan,nombre,subred,contenido,gateway_dhcp
+10,Diseño y producción,10.40.10.0/24,8 Mac + 6 estaciones Windows,NGFW .1 / DHCP con reservas
+20,Administración y comercial,10.40.20.0/24,4 portátiles en oficina,NGFW .1 / DHCP
+30,Servidores,10.40.30.0/24,SRV-C04-FS01 .10; NAS-C04-01 .20,Estáticas
+40,Invitados,10.40.40.0/24,Wi-Fi visitantes,NGFW .1 / DHCP aislado
+50,VPN remota,10.40.50.0/24,Pool VPN,NGFW
+90,Seguridad,10.40.90.0/24,Wazuh .10; KSC .20,Estáticas
+99,Gestión de red,10.40.99.0/24,NGFW .1; switch .2; AP .3 .4,Estáticas

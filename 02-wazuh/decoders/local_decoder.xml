@@ -1,0 +1,53 @@
+<!--
+  local_decoder.xml — Caso C04 Lumbre Digital S.A.S.
+  Copiar a /var/ossec/etc/decoders/local_decoder.xml y probar con wazuh-logtest ANTES de reiniciar.
+-->
+
+<!-- ===== 1. Samba vfs_full_audit (NAS de proyectos) =====
+     smb.conf:  full_audit:prefix = %u|%I|%m|%S
+     Ejemplo:   Oct 19 10:15:01 nas-c04-lp smbd_audit: sprada|192.168.56.30|win11-c04-lp|proyectos|renameat|ok|cliente_x/a.psd|cliente_x/a.psd.locked
+-->
+<!-- El ruleset trae el decoder "smbd" (program_name ^smbd), que también captura "smbd_audit".
+     Por eso este decoder es HIJO de "smbd" y exige el formato con barras verticales. -->
+<decoder name="samba-audit">
+  <parent>smbd</parent>
+  <prematch type="pcre2">^\S+\|\S+\|\S+\|\S+\|\w+\|\w+\|</prematch>
+  <regex type="pcre2">^(\S+)\|(\S+)\|(\S+)\|(\S+)\|(\w+)\|(\w+)\|(.*)$</regex>
+  <order>dstuser,srcip,machine,share,operation,result,file</order>
+</decoder>
+
+<!-- ===== 2. Kaspersky Security Center -> syslog CEF =====
+     PLANTILLA: ajustar con una línea REAL tomada de /var/ossec/logs/archives/archives.log (logall temporal).
+     El prematch acepta "Kaspersky" y "KasperskyLab" como vendor, y funciona tanto si el pre-decodificador
+     toma "CEF" como program_name (la línea queda "0|KasperskyLab|...") como si no.
+     Formato CEF: CEF:Version|Vendor|Product|Version|EventClassID|Name|Severity|Extension
+-->
+<!-- a) Cuando el pre-decodificador detecta un program_name (p. ej. "CEF" o el que ponga la consola) -->
+<decoder name="kaspersky-cef">
+  <program_name type="pcre2">.+</program_name>
+  <prematch type="pcre2">^(?:.*CEF:)?\d+\|Kaspersky</prematch>
+</decoder>
+
+<!-- b) Cuando la línea no trae program_name -->
+<decoder name="kaspersky-cef">
+  <prematch type="pcre2">CEF:\d+\|Kaspersky</prematch>
+</decoder>
+
+<decoder name="kaspersky-cef-campos">
+  <parent>kaspersky-cef</parent>
+  <regex type="pcre2">(?:CEF:)?\d+\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|([^|]*)\|(\d+)\|</regex>
+  <order>ks_vendor,ks_product,ks_version,ks_event_id,ks_name,ks_severity</order>
+</decoder>
+
+<!-- Campos de la extensión (se suman a los anteriores si aparecen) -->
+<decoder name="kaspersky-cef-campos">
+  <parent>kaspersky-cef</parent>
+  <regex type="pcre2">dhost=(\S+)</regex>
+  <order>ks_host</order>
+</decoder>
+
+<decoder name="kaspersky-cef-campos">
+  <parent>kaspersky-cef</parent>
+  <regex type="pcre2">dst=(\d+\.\d+\.\d+\.\d+)</regex>
+  <order>dstip</order>
+</decoder>

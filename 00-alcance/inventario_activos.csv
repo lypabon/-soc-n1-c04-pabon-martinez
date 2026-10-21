@@ -1,0 +1,28 @@
+id,hostname,tipo,so,funcion,propietario,vlan,c,i,d,criticidad,wazuh,kaspersky,glpi
+A-01,MAC-C04-01,iMac,macOS,Dirección creativa,Dir. creativo,10,3,2,2,3,Sí,Sí,Sí
+A-02,MAC-C04-02,iMac,macOS,Diseño,Dir. creativo,10,3,2,2,3,Sí,Sí,Sí
+A-03,MAC-C04-03,iMac,macOS,Diseño,Dir. creativo,10,3,2,2,3,Sí,Sí,Sí
+A-04,MAC-C04-04,iMac,macOS,Ilustración,Dir. creativo,10,3,2,2,3,Sí,Sí,Sí
+A-05,MAC-C04-05,Mac mini,macOS,Edición compartida,Dir. creativo,10,2,2,2,2,Sí,Sí,Sí
+A-06,MAC-C04-06,Mac mini,macOS,Edición compartida,Dir. creativo,10,2,2,2,2,Sí,Sí,Sí
+A-07,MAC-C04-07,Mac mini,macOS,Freelancer,Dir. creativo,10,2,2,1,2,Sí,Sí,Sí
+A-08,MAC-C04-08,Mac mini,macOS,Freelancer,Dir. creativo,10,2,2,1,2,Sí,Sí,Sí
+A-09,WS-C04-01,Estación,Windows 11,Edición de video,Líder producción,10,3,2,2,3,Sí,Sí,Sí
+A-10,WS-C04-02,Estación,Windows 11,Animación 3D,Líder producción,10,3,2,2,3,Sí,Sí,Sí
+A-11,WS-C04-03,Estación,Windows 11,Render,Líder producción,10,2,2,2,2,Sí,Sí,Sí
+A-12,WS-C04-04,Estación,Windows 11,Render,Líder producción,10,2,2,2,2,Sí,Sí,Sí
+A-13,WS-C04-05,Estación,Windows 11,Freelancer video,Líder producción,10,2,2,1,2,Sí,Sí,Sí
+A-14,WS-C04-06,Estación,Windows 11,Freelancer 3D,Líder producción,10,2,2,1,2,Sí,Sí,Sí
+A-15,LT-C04-01,Portátil,Windows 11,Gerencia,Gerencia,20,3,3,2,3,Sí,Sí,Sí
+A-16,LT-C04-02,Portátil,Windows 11,Community manager y pauta,Gerencia,20,3,3,2,3,Sí,Sí,Sí
+A-17,LT-C04-03,Portátil,Windows 11,Cuentas y comercial,Gerencia,20,3,2,2,3,Sí,Sí,Sí
+A-18,LT-C04-04,Portátil,Windows 11,TI y analista N1,Gerencia,20,3,3,2,3,Sí,Sí,Sí
+A-19,SRV-C04-FS01,Servidor,Windows Server 2019,Archivos administrativos,Admin. TI,30,3,3,3,3,Sí,Sí,Sí
+A-20,NAS-C04-01,NAS,Linux (Samba),Proyectos y respaldos,Admin. TI,30,3,3,3,3,Sí,Si compatible,Sí
+R-01,FW-C04-01,NGFW,Propietario,Perímetro VPN segmentación,Admin. TI,99,2,3,3,3,Syslog,—,Manual
+R-02,SW-C04-01,Switch 16p,—,Núcleo,Admin. TI,99,1,3,3,3,—,—,Manual
+R-03,AP-C04-01/02,2 AP,—,Wi-Fi corporativo e invitados,Admin. TI,99,1,2,2,2,—,—,Manual
+S-01,Google Workspace,SaaS,—,Correo Drive identidad,Gerencia,—,3,3,3,3,—,—,Manual
+S-02,Drive de entregas,SaaS,—,Entregas a clientes,Dir. creativo,—,3,2,2,3,—,—,Manual
+S-03,Cuentas de clientes (Meta/Google Ads/TikTok),SaaS terceros,—,Pauta y redes,Community manager,—,3,3,2,3,—,—,Manual
+S-04,glpi-c04-lp,VM IaaS,Ubuntu Server,Mesa de servicio,Admin. TI,—,3,2,2,3,Opcional,—,Sí

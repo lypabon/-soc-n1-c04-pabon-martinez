@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="900" viewBox="0 0 1700 900" font-family="DejaVu Sans">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<rect width="1700" height="900" fill="#ffffff"/>
+<text x="24" y="38" font-size="22" font-weight="bold" fill="#1F1F2E">Flujo de logs y de atención de alertas — SOC N1 Lumbre Digital</text>
+<text x="24" y="60" font-size="12" fill="#555">Caso C04 · Lumbre Digital S.A.S. (ficticia) · L. Pabón · direccionamiento de ejemplo · 19/10/2026</text>
+<rect x="30" y="90" width="420" height="780" rx="10" fill="#FFFFFF" fill-opacity="0.55" stroke="#9AA0A6" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="40" y="110" font-size="13" font-weight="bold" fill="#9AA0A6">Fuentes</text>
+<path d="M353,190 L620,261" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M430,263 L620,285" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M430,315 L620,310" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="494" y="303" width="61" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="525" y="315" font-size="11" text-anchor="middle" fill="#333">1514/TCP</text>
+<path d="M430,373 L620,337" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="466" y="339" width="119" height="30" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="525" y="351" font-size="11" text-anchor="middle" fill="#333">1514/TCP</text>
+<text x="525" y="365" font-size="11" text-anchor="middle" fill="#333">FIM + audit Samba</text>
+<path d="M430,520 L620,520" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="491" y="504" width="68" height="30" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="525" y="516" font-size="11" text-anchor="middle" fill="#333">13000/TCP</text>
+<text x="525" y="530" font-size="11" text-anchor="middle" fill="#333">15000/UDP</text>
+<path d="M950,534 L1020,540 L1020,330 L950,323" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="980" y="426" width="80" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1020" y="438" font-size="11" text-anchor="middle" fill="#333">514/UDP CEF</text>
+<path d="M430,620 L580,620 L580,345 L620,337" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="530" y="474" width="100" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="580" y="486" font-size="11" text-anchor="middle" fill="#333">514/UDP syslog</text>
+<path d="M785,250 L785,180" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M785,360 L785,400" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<path d="M620,425 L500,425 L430,421" fill="none" stroke="#E8590C" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="501" y="416" width="119" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="560" y="428" font-size="11" text-anchor="middle" fill="#333">bloquea IP origen</text>
+<path d="M933,250 L1149,170" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1017" y="201" width="48" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1041" y="213" font-size="11" text-anchor="middle" fill="#333">correo</text>
+<path d="M1230,170 L1230,250" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M889,180 L1100,251" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M1230,340 L1230,480" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1190" y="394" width="80" height="30" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1230" y="406" font-size="11" text-anchor="middle" fill="#333">crea ticket</text>
+<text x="1230" y="420" font-size="11" text-anchor="middle" fill="#333">(manual)</text>
+<path d="M430,735 L1230,735 L1230,570" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="761" y="719" width="138" height="30" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="830" y="731" font-size="11" text-anchor="middle" fill="#333">IMAPS 993</text>
+<text x="830" y="745" font-size="11" text-anchor="middle" fill="#333">receptor crea ticket</text>
+<path d="M1141,340 L864,480" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="950" y="394" width="106" height="30" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1003" y="406" font-size="11" text-anchor="middle" fill="#333">aislar equipo /</text>
+<text x="1003" y="420" font-size="11" text-anchor="middle" fill="#333">cuarentena</text>
+<path d="M1360,295 L1440,295" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M1360,521 L1440,519" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="50" y="130" width="380" height="60" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="240.0" y="156.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">8 Mac (grupo macos-diseno)</text>
+<text x="240.0" y="171.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">FIM programado · SCA · inventario</text>
+<rect x="50" y="210" width="380" height="60" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="240.0" y="236.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">10 Windows 11 (windows-estaciones)</text>
+<text x="240.0" y="251.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Security 4624/4625/6416 · FIM C:\Proyectos</text>
+<rect x="50" y="290" width="380" height="60" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="240.0" y="316.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">SRV-C04-FS01 (windows-servidores)</text>
+<text x="240.0" y="331.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">eventos · FIM D:\Compartido</text>
+<rect x="50" y="370" width="380" height="80" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="240.0" y="399.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NAS-C04-01 (linux-nas)</text>
+<text x="240.0" y="414.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">FIM /srv/proyectos en tiempo real</text>
+<text x="240.0" y="429.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Samba full_audit → /var/log/samba/audit.log</text>
+<rect x="50" y="490" width="380" height="60" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="240.0" y="516.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Network Agent Kaspersky</text>
+<text x="240.0" y="531.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">en los 20 equipos</text>
+<rect x="50" y="590" width="380" height="60" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="240.0" y="616.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">NGFW FW-C04-01</text>
+<text x="240.0" y="631.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">denegaciones · IPS · web · VPN · cambios</text>
+<rect x="50" y="700" width="380" height="70" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="240.0" y="731.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Empleado reenvía correo sospechoso</text>
+<text x="240.0" y="746.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">reporte-phishing@lumbredigital.example</text>
+<rect x="620" y="250" width="330" height="110" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="785.0" y="286.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Wazuh manager wazuh-c04</text>
+<text x="785.0" y="301.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">decoders samba-audit · kaspersky-cef</text>
+<text x="785.0" y="316.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">reglas 100100–100400</text>
+<text x="785.0" y="331.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">active response</text>
+<rect x="620" y="480" width="330" height="80" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="785.0" y="516.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Kaspersky Security Center</text>
+<text x="785.0" y="531.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">políticas · EDR · control USB/web</text>
+<rect x="620" y="110" width="330" height="70" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="785.0" y="141.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Wazuh indexer + dashboard</text>
+<text x="785.0" y="156.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">retención 90 días + 12 meses archivo</text>
+<rect x="620" y="400" width="330" height="50" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="785.0" y="421.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Active response en el NAS</text>
+<text x="785.0" y="436.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">firewall-drop IP origen (5763, 100322/23)</text>
+<rect x="1100" y="250" width="260" height="90" rx="7" fill="#1F1F2E" stroke="#1F1F2E" stroke-width="2"/>
+<text x="1230.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#FFFFFF">Analista SOC N1</text>
+<text x="1230.0" y="299.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">triage con playbooks</text>
+<text x="1230.0" y="314.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">PB-01 … PB-09</text>
+<rect x="1100" y="110" width="260" height="60" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="1230.0" y="136.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Correo de alerta (nivel ≥ 10)</text>
+<text x="1230.0" y="151.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">relé Postfix → SMTP 587</text>
+<rect x="1100" y="480" width="260" height="90" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="1230.0" y="514.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">GLPI (nube, HTTPS)</text>
+<text x="1230.0" y="529.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">ticket con plantilla · SLA/OLA</text>
+<text x="1230.0" y="544.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">KB · inventario</text>
+<rect x="1440" y="250" width="230" height="90" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1555.0" y="284.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">N2 externo</text>
+<text x="1555.0" y="299.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">investigación · contención</text>
+<text x="1555.0" y="314.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">mayor · restauración</text>
+<rect x="1440" y="480" width="230" height="70" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1555.0" y="511.5" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Responsable SOC / Gerencia</text>
+<text x="1555.0" y="526.5" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">KPIs · notificación Ley 1581</text>
+</svg>
