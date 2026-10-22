@@ -1,0 +1,11 @@
+actividad,gerencia,lider_proyecto,analista_n1,admin_ti,prov_ngfw,prov_edr
+Aprobar alcance y autorización,A,R,I,C,—,—
+Diseñar arquitectura y segmentación,I,A/R,C,C,C,—
+Instalar y configurar Wazuh,I,A,C,R,—,—
+Desplegar Kaspersky,I,A,C,R,—,C
+Desplegar y configurar GLPI,I,A,C,R,—,—
+Comprar e instalar el NGFW,A,R,I,C,R,—
+Activar MFA en Google Workspace,A,C,I,R,—,—
+Definir procesos y playbooks,I,A,R,C,—,—
+Capacitar al personal,I,A,R,C,C,C
+Piloto y puesta en producción,A,R,R,C,I,I

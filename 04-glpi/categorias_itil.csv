@@ -1,0 +1,23 @@
+raiz,subcategoria,grupo_asignado,visible_autoservicio
+Seguridad,Malware / EDR,SOC N1,no
+Seguridad,Ransomware,SOC N1,no
+Seguridad,Acceso no autorizado y autenticación,SOC N1,no
+Seguridad,Phishing e ingeniería social,SOC N1,si
+Seguridad,Cuentas de clientes (redes y pauta),SOC N1,si
+Seguridad,Integridad de archivos (FIM),SOC N1,no
+Seguridad,Dispositivos extraíbles (USB),SOC N1,no
+Seguridad,Reconocimiento de red,SOC N1,no
+Seguridad,Cuentas y privilegios,SOC N1,no
+Seguridad,Vulnerabilidades,SOC N1,no
+Seguridad,Fuga de datos,SOC N1,si
+Incidente de TI,Hardware,SOC N1,si
+Incidente de TI,Software,SOC N1,si
+Incidente de TI,Red,SOC N1,si
+Incidente de TI,Impresión,SOC N1,si
+Solicitud,Alta/baja de usuario,SOC N1,si
+Solicitud,Instalación de software,SOC N1,si
+Solicitud,Acceso a recursos,SOC N1,si
+Solicitud,Autorización de USB,SOC N1,si
+Cambio,Configuración de seguridad,SOC N2,no
+Cambio,Exclusión del EDR,SOC N2,no
+Cambio,Regla del SIEM,SOC N2,no

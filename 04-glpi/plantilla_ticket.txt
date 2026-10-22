@@ -1,0 +1,15 @@
+PLANTILLA "Alerta de seguridad" — campos obligatorios: título, categoría, origen, elemento asociado, urgencia, impacto, descripción.
+Título: [Origen] [ID de alerta] – resumen corto      ej.: [Wazuh] [100322] – Renombrado masivo en NAS desde win11-c04-lp
+
+Descripción predefinida:
+ID de regla / alerta:
+Fecha y hora (zona America/Bogota):
+Activo y usuario afectados:
+IP de origen / destino:
+Qué ocurrió (2-3 líneas):
+Enriquecimiento (inventario, historial, reputación):
+Evidencias (enlaces, capturas, hash):
+Acciones realizadas por N1 (con hora):
+Clasificación (falso positivo / benigno / verdadero positivo):
+Decisión (cerrar / escalar a N2):
+Mejora propuesta (ajuste de regla o política):

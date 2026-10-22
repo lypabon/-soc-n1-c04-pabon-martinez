@@ -1,0 +1,19 @@
+concepto,tipo,fuente,cantidad,valor_unitario_cop,total_cop,frecuencia
+Host de seguridad mini PC Ryzen 7 32GB 1TB (Bosgame P4),CAPEX,USD 399 precio habitual - PCWorld https://www.pcworld.com/article/2794803/this-ryzen-7-mini-pc-boasts-32gb-of-ram-for-just-310.html (+IVA; sin flete),1,1505366,1505366,Única
+Proxmox VE + Wazuh + GLPI,—,Código abierto,—,0,0,—
+Windows Server 2022 Standard 16 núcleos (VM consola Kaspersky),CAPEX,USD 1.056,99 CDW https://www.cdw.com/product/microsoft-windows-server-2022-standard-edition-license-16-cores/6772063 (+IVA),1,3987862,3987862,Única
+NGFW FortiGate 40F + 3 años FortiCare/UTP,CAPEX,MercadoLibre Colombia 19/10/2026 (05-ngfw/fuentes_precios_referencia.md),1,4589199,4589199,Única
+Disco externo 2 TB respaldo fuera de línea,CAPEX,Toshiba 2TB COP 462.900 Falabella https://www.falabella.com.co/falabella-co/shop/disco-duro-externo-2tb,2,462900,925800,Única
+Implementación (consultora),CAPEX,SUPUESTO: 80 h x COP 50.000/h,80,50000,4000000,Única
+Capacitación anti-phishing,CAPEX,SUPUESTO: incluida en las 80 h de la consultora,1,0,0,Única
+Switch 16p y 2 AP,—,SUPUESTO: se reutilizan,—,0,0,—
+Contingencia 10 % sobre CAPEX,CAPEX,Cálculo,—,—,1500823,Única
+Kaspersky Next EDR Optimum (20 equipos),OPEX,EUR 100,60/equipo/año sin IVA - Cint Consulting https://www.cint-consulting.com/tienda/kaspersky-para-empresas/kaspersky-next-edr-optimum/ (EUR 3.568; +IVA),20,427140,8542791,Anual
+GLPI nube DigitalOcean 2vCPU 4GB 80GB + respaldos,OPEX,USD 24 + 20 % = USD 28,80/mes - https://infratally.com/articles/digitalocean-droplet-pricing-guide-2026/ (+IVA),1,108658,108658,Mensual
+Dominio y certificado,—,Subdominio del dominio existente de Workspace; Let's Encrypt,—,0,0,—
+N2 externo bolsa de horas,OPEX,SUPUESTO: 4 h/mes x COP 90.000/h,4,90000,360000,Mensual
+NGFW renovación suscripciones,OPEX,Incluidas años 1-3; renovar año 4,—,0,0,—
+# TRM 3.170,46 (16/10/2026) · EUR 3.568 (16/10/2026)
+# CAPEX total = 16.509.050 (tope 20.000.000) -> cumple
+# OPEX mensual = 711.899 + 108.658 + 360.000 = 1.180.557 (tope 1.500.000) -> cumple
+# OPEX anual = 14.166.687 · TCO 3 años = 16.509.050 + 3 x 14.166.687 = 59.009.111

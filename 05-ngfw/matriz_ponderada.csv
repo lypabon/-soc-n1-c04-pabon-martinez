@@ -1,0 +1,11 @@
+criterio,peso,calif_A_FortiGate40F,calif_B_PA410,calif_C_XGS88,justificacion
+Rendimiento con seguridad activa vs 390 Mbps,0.20,3,4,5,"A: 600 Mbps TP pero TLS 310; B: 600-700; C: 2000 TP y 600 TLS"
+Funciones NGFW requeridas,0.15,5,5,5,"Las tres traen IPS, app control, filtro web, antimalware y sandbox"
+VPN y conectividad,0.10,5,3,5,"A: 200 usuarios SSL-VPN; C: VPN remota ilimitada; B: GlobalProtect con funciones avanzadas por suscripción"
+Gestión y facilidad de operación,0.10,4,4,4,"Consolas web comparables"
+Integración y logs (syslog/CEF/API),0.10,5,5,4,"A y B exportan syslog/CEF; C syslog estándar"
+Costo total a 3 años,0.15,5,1,4,"A 4,59 M; C 5,55 M + importación; B 17,06 M"
+Soporte garantía y presencia en Colombia,0.10,5,4,3,"A con vendedores locales; C sin oferta local encontrada"
+Escalabilidad y alta disponibilidad,0.05,4,4,4,"Las tres admiten HA con segundo equipo"
+Capacitación y comunidad,0.05,5,4,4,"Fortinet NSE gratuito y gran comunidad"
+TOTAL (calif x peso),1.00,4.45,3.70,4.35,"Gana A (FortiGate 40F) por costo y disponibilidad local"

@@ -1,0 +1,12 @@
+nombre,login,correo,cargo,entidad,perfil,grupo
+Mariana Rueda,mrueda,mrueda@lumbredigital.example,Gerente general,Administración y TI,Supervisor,Gerencia
+Óscar Villamizar,ovillamizar,ovillamizar@lumbredigital.example,Administrador de TI y analista N1,Administración y TI,Analista N1,SOC N1
+Andrés Galvis,agalvis,agalvis@lumbredigital.example,Director creativo,Creativo y Producción,Autoservicio,Usuarios
+Sofía Prada,sprada,sprada@lumbredigital.example,Diseñadora,Creativo y Producción,Autoservicio,Usuarios
+Camilo Ortiz,cortiz,cortiz@lumbredigital.example,Diseñador,Creativo y Producción,Autoservicio,Usuarios
+Valentina Duarte,vduarte,vduarte@lumbredigital.example,Ilustradora,Creativo y Producción,Autoservicio,Usuarios
+Julián Mantilla,jmantilla,jmantilla@lumbredigital.example,Editor de video,Creativo y Producción,Autoservicio,Usuarios
+Daniela Serrano,dserrano,dserrano@lumbredigital.example,Animadora 3D,Creativo y Producción,Autoservicio,Usuarios
+Felipe Acevedo,facevedo,facevedo@lumbredigital.example,Community manager y pauta,Cuentas y Comercial,Autoservicio,Usuarios
+Laura Quintero,lquintero,lquintero@lumbredigital.example,Ejecutiva de cuentas,Cuentas y Comercial,Autoservicio,Usuarios
+(externo) Proveedor N2,n2-proveedor,n2@proveedor-soc.example,N1 respaldo y N2,Lumbre Digital S.A.S.,Administrador SOC,SOC N2

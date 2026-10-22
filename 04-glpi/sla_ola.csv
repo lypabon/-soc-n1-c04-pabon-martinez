@@ -1,0 +1,7 @@
+severidad_soc,prioridad_glpi,sla_tto,sla_ttr,calendario,ola_n2_reconocer
+Crítica,Mayor,15 min,4 h,24x7,30 min
+Alta,Muy alta,30 min,8 h,24x7 (guardia),2 h
+Media,Media,2 h,24 h,Laboral C04 (L-V 7-19),siguiente día hábil
+Baja,Baja,8 h hábiles,72 h,Laboral C04,no aplica
+Informativa,Muy baja,1 día hábil,5 días hábiles,Laboral C04,no aplica
+# Escalamiento: al 75 % del TTO sin atención -> subir prioridad y notificar al responsable del SOC

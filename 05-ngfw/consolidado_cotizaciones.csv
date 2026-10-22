@@ -1,0 +1,13 @@
+concepto,opcion_A,opcion_B,opcion_C
+Marca y modelo,Fortinet FortiGate 40F,Palo Alto Networks PA-410,Sophos XGS 88
+Fuente,MercadoLibre Colombia (aviso 3 años),Questivity (EE. UU.) + referencia soporte PA-510,EnterpriseAV (EE. UU.)
+Fecha de consulta,19/10/2026,19/10/2026,19/10/2026
+Threat protection (hoja de datos),600 Mbps,600-700 Mbps,2000 Mbps
+Inspección TLS (hoja de datos),310 Mbps,no publicado en la fuente,600 Mbps
+Precio base,COP 4.589.199 (IVA incluido en el aviso - verificar),USD 950 + 2.950 + 621 = USD 4.521,USD 1.469,77
+Incluye,Equipo + 3 años FortiCare + FortiGuard UTP,Equipo + 3 años Enterprise bundle + soporte premium (referencia),Equipo + 3 años Xstream Protection + Enhanced Support
+Valor en COP sin IVA,3.856.470 (calculado),14.333.650,4.659.847
+IVA 19 %,732.729 (calculado),2.723.393,885.371
+Total inicial = TCO 3 años (COP),4.589.199,17.057.043,5.545.218
+Instalación y capacitación,No incluida (la hace la consultora - horas en presupuesto),No incluida,No incluida
+Observaciones,"Vendedor local, entrega en días; TLS 310 Mbps < 390: inspección TLS selectiva","Excede el espacio del CAPEX bajo; sin venta local","Mejor rendimiento; sin venta local, sumar importación"

@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="900" viewBox="0 0 1700 900" font-family="DejaVu Sans">
+<defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#444"/></marker></defs>
+<rect width="1700" height="900" fill="#ffffff"/>
+<text x="24" y="38" font-size="22" font-weight="bold" fill="#1F1F2E">Flujo de triage del SOC N1 — Lumbre Digital</text>
+<text x="24" y="60" font-size="12" fill="#555">Caso C04 · Lumbre Digital S.A.S. (ficticia) · L. Pabón · direccionamiento de ejemplo · 19/10/2026</text>
+<rect x="40" y="580" width="800" height="290" rx="10" fill="#EAF6EC" fill-opacity="0.55" stroke="#2F7D3A" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="50" y="600" font-size="13" font-weight="bold" fill="#2F7D3A">Permitido al N1 (si el playbook lo indica)</text>
+<rect x="860" y="580" width="800" height="290" rx="10" fill="#FCE8EC" fill-opacity="0.55" stroke="#A61E4D" stroke-width="1.6" stroke-dasharray="6 4"/>
+<text x="870" y="600" font-size="13" font-weight="bold" fill="#A61E4D">Prohibido al N1 (N2 o cambio aprobado)</text>
+<path d="M290,145 L340,145" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M590,145 L640,145" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M890,145 L940,145" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M1190,145 L1260,145" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1182" y="136" width="87" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1225" y="148" font-size="11" text-anchor="middle" fill="#333">FP / benigno</text>
+<path d="M1065,180 L1065,250" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="1002" y="206" width="125" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="1065" y="218" font-size="11" text-anchor="middle" fill="#333">verdadero positivo</text>
+<path d="M940,290 L890,290" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M640,290 L590,290" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M340,290 L290,290" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="304" y="281" width="23" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="315" y="293" font-size="11" text-anchor="middle" fill="#333">no</text>
+<path d="M465,330 L465,400" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<rect x="454" y="356" width="23" height="16" rx="3" fill="#fff" stroke="#ddd"/>
+<text x="465" y="368" font-size="11" text-anchor="middle" fill="#333">sí</text>
+<path d="M590,440 L640,440" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M890,440 L940,440" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M1190,440 L1260,440" fill="none" stroke="#444" stroke-width="1.7"  marker-end="url(#ar)"/>
+<path d="M165,330 L165,540 L1460,540 L1460,480" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<path d="M1460,180 L1460,400" fill="none" stroke="#444" stroke-width="1.7" stroke-dasharray="5 4" marker-end="url(#ar)"/>
+<rect x="40" y="110" width="250" height="70" rx="7" fill="#FFF8DB" stroke="#B8860B" stroke-width="2"/>
+<text x="165.0" y="134.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">1. Recibir</text>
+<text x="165.0" y="149.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Wazuh ≥10 (correo/tablero) ·</text>
+<text x="165.0" y="164.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Kaspersky · NGFW · buzón phishing</text>
+<rect x="340" y="110" width="250" height="70" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="465.0" y="134.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">2. Registrar</text>
+<text x="465.0" y="149.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">ticket GLPI con plantilla</text>
+<text x="465.0" y="164.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">“Alerta de seguridad”</text>
+<rect x="640" y="110" width="250" height="70" rx="7" fill="#E7F0FB" stroke="#1F5FAD" stroke-width="2"/>
+<text x="765.0" y="134.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">3. Enriquecer</text>
+<text x="765.0" y="149.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">inventario GLPI · historial</text>
+<text x="765.0" y="164.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Wazuh · reputación IP/URL/hash</text>
+<rect x="940" y="110" width="250" height="70" rx="7" fill="#F3EEFA" stroke="#6B46A8" stroke-width="2"/>
+<text x="1065.0" y="134.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">4. Clasificar</text>
+<text x="1065.0" y="149.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">falso positivo / benigno /</text>
+<text x="1065.0" y="164.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">verdadero positivo</text>
+<rect x="1260" y="110" width="400" height="70" rx="7" fill="#F1F1F1" stroke="#777777" stroke-width="2"/>
+<text x="1460.0" y="134.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Falso positivo o benigno</text>
+<text x="1460.0" y="149.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">cerrar con solución + proponer ajuste</text>
+<text x="1460.0" y="164.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">de regla (ticket de Cambio)</text>
+<rect x="940" y="250" width="250" height="80" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="1065.0" y="279.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">5. Asignar severidad</text>
+<text x="1065.0" y="294.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Crítica 15 min · Alta 30 min</text>
+<text x="1065.0" y="309.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Media 2 h · Baja 8 h</text>
+<rect x="640" y="250" width="250" height="80" rx="7" fill="#1F1F2E" stroke="#1F1F2E" stroke-width="2"/>
+<text x="765.0" y="279.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#FFFFFF">6. Ejecutar playbook</text>
+<text x="765.0" y="294.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">PB-01 … PB-09</text>
+<text x="765.0" y="309.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#FFFFFF">(solo acciones permitidas al N1)</text>
+<rect x="340" y="250" width="250" height="80" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="465.0" y="279.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">¿Requiere escalar?</text>
+<text x="465.0" y="294.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">compromiso confirmado, activo</text>
+<text x="465.0" y="309.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">crítico, Alta/Crítica, varios equipos</text>
+<rect x="40" y="250" width="250" height="80" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="165.0" y="279.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">7a. Cerrar</text>
+<text x="165.0" y="294.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">solución documentada</text>
+<text x="165.0" y="309.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">en GLPI</text>
+<rect x="340" y="400" width="250" height="80" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="465.0" y="429.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">7b. Escalar a N2</text>
+<text x="465.0" y="444.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">plantilla · grupo SOC N2 ·</text>
+<text x="465.0" y="459.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">llamada si Alta/Crítica</text>
+<rect x="640" y="400" width="250" height="80" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="765.0" y="429.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">N2 investiga y decide</text>
+<text x="765.0" y="444.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">contención mayor,</text>
+<text x="765.0" y="459.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">restauración, notificación</text>
+<rect x="940" y="400" width="250" height="80" rx="7" fill="#FDEBD3" stroke="#E8590C" stroke-width="2"/>
+<text x="1065.0" y="429.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Informe de incidente</text>
+<text x="1065.0" y="444.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">(Anexo D) · aviso a gerencia;</text>
+<text x="1065.0" y="459.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">Ley 1581 si hay datos personales</text>
+<rect x="1260" y="400" width="400" height="80" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="1460.0" y="429.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">8. Aprender</text>
+<text x="1460.0" y="444.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">lección aprendida · ajuste de reglas y</text>
+<text x="1460.0" y="459.0" font-size="11" font-weight="normal" text-anchor="middle" fill="#1F1F2E">políticas · KPIs (MTTA, MTTR, FP)</text>
+<rect x="60" y="620" width="760" height="40" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="440.0" y="644.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Cuarentena de archivo desde Kaspersky</text>
+<rect x="60" y="668" width="760" height="40" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="440.0" y="692.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Aislar equipo (Alta/Crítica) y avisar a N2</text>
+<rect x="60" y="716" width="760" height="40" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="440.0" y="740.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Bloqueo temporal de IP/dominio en el NGFW</text>
+<rect x="60" y="764" width="760" height="40" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="440.0" y="788.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Cierre de sesiones y cambio de clave (cuenta no privilegiada)</text>
+<rect x="60" y="812" width="760" height="40" rx="7" fill="#EAF6EC" stroke="#2F7D3A" stroke-width="2"/>
+<text x="440.0" y="836.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Pedir al usuario no tocar el equipo · desmontar unidad de red</text>
+<rect x="880" y="620" width="760" height="40" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1260.0" y="644.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Borrar o alterar evidencias</text>
+<rect x="880" y="668" width="760" height="40" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1260.0" y="692.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Apagar el NAS o el servidor · restaurar · reinstalar</text>
+<rect x="880" y="716" width="760" height="40" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1260.0" y="740.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Eliminar o modificar cuentas privilegiadas</text>
+<rect x="880" y="764" width="760" height="40" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1260.0" y="788.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Cambiar políticas, exclusiones o reglas sin ticket</text>
+<rect x="880" y="812" width="760" height="40" rx="7" fill="#FCE8EC" stroke="#A61E4D" stroke-width="2"/>
+<text x="1260.0" y="836.0" font-size="12.5" font-weight="bold" text-anchor="middle" fill="#1F1F2E">Forense, ingeniería inversa o acciones ofensivas</text>
+</svg>

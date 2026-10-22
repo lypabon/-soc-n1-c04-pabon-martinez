@@ -1,0 +1,28 @@
+Asunto: Solicitud de cotización académica – firewall de nueva generación para una pyme (ejercicio universitario)
+
+Buenos días.
+
+Mi nombre es Leidy Yulieth Pabón Antolínez, estudiante de Ingeniería de Sistemas de las Unidades Tecnológicas
+de Santander (UTS). Como parte de un ejercicio académico del curso Ética del Hacking, SIN compromiso de compra,
+estoy diseñando un centro de operaciones de seguridad para una empresa FICTICIA de 10 empleados y 20 equipos
+de cómputo (agencia de marketing).
+
+Agradezco su cotización de un firewall de nueva generación con estos requisitos:
+- Enlace de Internet de 300 Mbps con un solo proveedor.
+- Rendimiento mínimo de 390 Mbps con prevención de amenazas activa (IPS + antimalware + control de aplicaciones).
+- 10 usuarios, 20 equipos y hasta 15 dispositivos de invitados; 7 VLAN.
+- VPN de acceso remoto para 6 usuarios concurrentes; sin VPN sitio a sitio; sin servicios publicados (DMZ).
+- Funciones: prevención de intrusiones, control de aplicaciones, filtrado web por categorías, antimalware,
+  inspección SSL/TLS y DNS seguro.
+- Sin alta disponibilidad.
+- Exportación de logs por syslog o CEF hacia un SIEM.
+
+Por favor incluir: referencia del equipo, suscripciones de seguridad a 1 año y a 3 años, soporte y garantía,
+instalación y capacitación (si aplica), valores en COP con IVA discriminado, TRM usada si hay valores en USD,
+vigencia de la cotización, tiempo de entrega y datos de contacto.
+
+Muchas gracias por su atención.
+
+Leidy Yulieth Pabón Antolínez
+Ingeniería de Sistemas — Unidades Tecnológicas de Santander
+[correo institucional] · [teléfono]
